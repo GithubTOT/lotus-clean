@@ -1,9 +1,32 @@
+"use client";
+
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Services from "@/components/Services";
+import PricingTable from "@/components/PricingTable";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import FAQ from "@/components/FAQ";
+import ContactCTA from "@/components/ContactCTA";
+import Footer from "@/components/Footer";
+
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center bg-background">
-      <h1 className="text-3xl font-bold text-primary">
-        Lotus Health Center – build OK
-      </h1>
-    </main>
+    <div className="flex flex-col min-h-screen bg-background text-foreground">
+      {/* Header */}
+      <Header />
+
+      {/* Main Content */}
+      <main className="flex-1">
+        <Hero />
+        <Services />
+        <PricingTable />
+        <WhyChooseUs />
+        <FAQ />
+        <ContactCTA />
+      </main>
+
+      {/* Footer */}
+      <Footer />
+    </div>
   );
 }
